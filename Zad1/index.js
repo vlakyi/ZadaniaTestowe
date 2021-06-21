@@ -2,7 +2,7 @@
 
 // Utwórz klasę StringBuilder(baseString) i dodaj do niej następujące funkcje:
 
-// Wartość domyślna dla parametru baseSgtring to pusty wiersz. 
+// Wartość domyślna dla parametru baseSgtring to pusty wiersz.
 // Egzemplarz będzie miał właściwość value, w którą wpisuje się wartość parametru baseString.
 // Metoda append(str) - dostaje parametr str (wiersza) i dodaje ją na koniec właściwości value.
 // Metoda prepend(str) - dostaje parametr str (wiersza) i dodaje ją na początek właściwości value.
@@ -11,16 +11,15 @@
 // Ten kod powinien być wykonany bezbłędnie.
 
 // const builder = new StringBuilder('.');
-				
+
 // builder
 //   .append('^')
 //   .prepend('^')
 //   .pad('=');
-						
+
 // console.log(builder); // '=^.^='
 
 class StringBuilder {
-  
   constructor(baseString = '') {
     this.value = baseString;
   }
@@ -38,15 +37,12 @@ class StringBuilder {
   pad(str) {
     this.append(str);
     this.prepend(str);
-    return this;            // Żeby na końcu się wyświetlała wartość value jak w zadaniu musimy w tym miejscu zwrócić
+    return this; // Żeby na końcu się wyświetlała wartość value jak w zadaniu musimy w tym miejscu zwrócić
     // this.value, ponieważ nie ma mażliwości na sprawdzenie tego, która funkcja jest ostatnia w łańcuchu.
   }
 }
 
 const builder = new StringBuilder('.');
-builder
-  .append('^')
-  .prepend('^')
-  .pad('=');
+builder.append('^').prepend('^').pad('=');
 
 console.log(builder);
